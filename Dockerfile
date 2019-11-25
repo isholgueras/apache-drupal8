@@ -48,3 +48,9 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
     && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
     && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
+# Install DrupalExtension and Behat
+RUN sudo mkdir /opt/drupalextension
+RUN sudo chown -R 1000:1000 /opt/drupalextension
+COPY drupalextension-composer.json /opt/drupalextension/composer.json
+RUN cd /opt/drupalextension && composer install
+RUN sudo ln -s /opt/drupalextension/bin/behat /usr/local/bin/behat
