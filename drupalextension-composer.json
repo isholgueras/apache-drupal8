@@ -1,0 +1,12 @@
+{
+  "require": {
+    "drupal/drupal-extension": "v4.0.0rc1",
+    "drupal/drupal-driver": "v2.0.0-rc1",
+    "dmore/chrome-mink-driver": "^2.4.1",
+    "dmore/behat-chrome-extension": "dev-master@dev",
+    "bex/behat-screenshot": "^1.2"
+  },
+  "config": {
+    "bin-dir": "bin/"
+  }
+}
