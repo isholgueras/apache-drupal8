@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
   wget \
   && docker-php-ext-install mysqli \
   && docker-php-ext-install pdo \
+  && docker-php-ext-install common \
   && docker-php-ext-install pdo_mysql \
   && docker-php-ext-install bcmath
 
