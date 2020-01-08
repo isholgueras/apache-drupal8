@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
   sudo \
   libzip-dev \
   unzip \
+  exif \
   vim \
   wget \
   && docker-php-ext-install mysqli \
