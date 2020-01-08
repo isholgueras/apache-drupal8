@@ -7,13 +7,21 @@ RUN apt-get update && apt-get install -y \
   mariadb-client \
   rsync \
   sudo \
+  libzip-dev \
   unzip \
   vim \
   wget \
   && docker-php-ext-install mysqli \
   && docker-php-ext-install pdo \
-  && docker-php-ext-install common \
+  && docker-php-ext-install exif \
+  && docker-php-ext-install gd \
+  && docker-php-ext-install dom \
+  && docker-php-ext-install gettext \
   && docker-php-ext-install pdo_mysql \
+  && docker-php-ext-install json \
+  && docker-php-ext-install mbstring \
+  && docker-php-ext-install xml \
+  && docker-php-ext-install zip \
   && docker-php-ext-install bcmath
 
 RUN pecl install imagick
